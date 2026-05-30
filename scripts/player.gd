@@ -24,6 +24,18 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_mouse_click") and shoot_timer.is_stopped():
 		shoot()
 
+func _on_hurtbox_body_entered(body: Node) -> void:
+	# Check if the object hitting us is an enemy
+	if body.is_in_group("enemies") or body.has_method("die"):
+		die()
+
+func die() -> void:
+	var ui = get_tree().get_first_node_in_group("ui")
+	if ui:
+		ui.show_game_over()
+	
+	queue_free()
+
 func shoot() -> void:
 	shoot_timer.start()
 	

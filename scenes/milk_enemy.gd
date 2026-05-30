@@ -61,7 +61,7 @@ func start_telegraph() -> void:
 	
 	# Visual flash to telegraph the strike
 	var tween = create_tween()
-	tween.tween_property(sprite, "modulate", Color.RED, 0.4) 
+	tween.tween_property(sprite, "modulate", Color.ORANGE_RED, 0.4) 
 	tween.finished.connect(start_dash)
 
 func start_dash() -> void:

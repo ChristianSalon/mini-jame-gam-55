@@ -2,13 +2,60 @@
 
 [ext_resource type="Script" uid="uid://b4dm7ugsk0of5" path="res://ui.gd" id="1_nt7q6"]
 [ext_resource type="FontFile" uid="uid://krq1ljcjmn58" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_x4jx1"]
+[ext_resource type="FontFile" uid="uid://c5hflqlyalk8l" path="res://assets/fonts/PixelOperator8.ttf" id="3_yev5y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4jx1"]
+bg_color = Color(0.8392157, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yev5y"]
+bg_color = Color(0.90588236, 0.90588236, 0.90588236, 1)
+expand_margin_left = 16.0
+expand_margin_top = 8.0
+expand_margin_right = 16.0
+expand_margin_bottom = 8.0
 
 [node name="UI" type="CanvasLayer" unique_id=1931595746]
+process_mode = 3
 script = ExtResource("1_nt7q6")
 
 [node name="ScoreLabel" type="Label" parent="." unique_id=1561941357]
-offset_right = 40.0
-offset_bottom = 23.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+texture_filter = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.8392157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_x4jx1")
 theme_override_font_sizes/font_size = 24
+
+[node name="GameOverPanel" type="PanelContainer" parent="." unique_id=1171152237]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_x4jx1")
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOverPanel" unique_id=1732409285]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverPanel/CenterContainer" unique_id=297860296]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="Label" type="Label" parent="GameOverPanel/CenterContainer/VBoxContainer" unique_id=1673276389]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x4jx1")
+theme_override_font_sizes/font_size = 32
+text = "THE MILK SPOILED YOUR DAY!"
+
+[node name="RestartButton" type="Button" parent="GameOverPanel/CenterContainer/VBoxContainer" unique_id=1332184190]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.8392157, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_yev5y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yev5y")
+text = "Try Again"
