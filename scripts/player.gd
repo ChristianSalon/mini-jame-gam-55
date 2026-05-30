@@ -1,22 +1,28 @@
 extends CharacterBody2D
 
+const BULLET_SCENE = preload("res://scenes/bullet.tscn")
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	var direction := Input.get_axis("move_left", "move_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	velocity = input_direction * SPEED
 	move_and_slide()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("left_mouse_click"):
+		shoot()
+
+func shoot() -> void:
+	var bullet = BULLET_SCENE.instantiate()
+	
+	# Current player position
+	bullet.global_position = global_position
+	
+	var target = get_global_mouse_position()
+	bullet.direction = (target - global_position).normalized()
+	bullet.rotation = bullet.direction.angle()
+	
+	get_parent().add_child(bullet)
