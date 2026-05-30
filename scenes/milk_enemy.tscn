@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://dbxinakb7mtmm"]
 
 [ext_resource type="Texture2D" uid="uid://8gy3j3rn8vfv" path="res://assets/sprites/undead_milk.png" id="1_0p51g"]
+[ext_resource type="Script" uid="uid://m3vtuikl2imj" path="res://scenes/milk_enemy.gd" id="1_6yip4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6yip4"]
 height = 36.0
 
 [node name="MilkEnemy" type="CharacterBody2D" unique_id=1911225450]
+collision_layer = 2
+script = ExtResource("1_6yip4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=539953770]
 texture_filter = 1

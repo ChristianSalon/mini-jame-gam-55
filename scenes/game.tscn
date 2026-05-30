@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://xwflvcsovhvn" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://ckhfbvj8wq6s5" path="res://assets/sprites/world_tileset.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dlmx5dlft566k" path="res://scenes/enemy_spawner.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dbxinakb7mtmm" path="res://scenes/milk_enemy.tscn" id="2_lnu2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
@@ -143,11 +144,13 @@ tile_set = SubResource("TileSet_lbhrr")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1875312892]
 position_smoothing_enabled = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=580726327]
+[node name="BottomWorldCollider" type="StaticBody2D" parent="." unique_id=580726327]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1156635707]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomWorldCollider" unique_id=1156635707]
 position = Vector2(0, 336)
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
+
+[node name="EnemySpawner" parent="." unique_id=1375909385 instance=ExtResource("2_lbhrr")]
 
 [node name="Enemies" type="Node" parent="." unique_id=1810365814]
 

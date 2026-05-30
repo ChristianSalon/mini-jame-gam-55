@@ -5,6 +5,8 @@ const BULLET_SCENE = preload("res://scenes/bullet.tscn")
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+@onready var shoot_timer: Timer = $ShootTimer
+
 
 func _physics_process(delta: float) -> void:
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -12,12 +14,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("left_mouse_click"):
+	if event.is_action_pressed("left_mouse_click") and shoot_timer.is_stopped():
 		shoot()
 
 func shoot() -> void:
-	var bullet = BULLET_SCENE.instantiate()
+	shoot_timer.start()
 	
+	var bullet = BULLET_SCENE.instantiate()
 	# Current player position
 	bullet.global_position = global_position
 	
