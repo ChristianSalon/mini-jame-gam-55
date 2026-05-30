@@ -78,4 +78,8 @@ func start_dash() -> void:
 	current_state = State.STALKING
 
 func die() -> void:
+	var ui = get_tree().get_first_node_in_group("ui")
+	if ui:
+		ui.add_score(100)
+	
 	queue_free()

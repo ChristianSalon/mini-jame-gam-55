@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ckhfbvj8wq6s5" path="res://assets/sprites/world_tileset.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dlmx5dlft566k" path="res://scenes/enemy_spawner.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dbxinakb7mtmm" path="res://scenes/milk_enemy.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://u2f8c4gd7x02" path="res://scenes/ui.tscn" id="5_iywne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -161,3 +162,5 @@ position = Vector2(180, 0)
 position = Vector2(-122, -4)
 
 [node name="Player" parent="." unique_id=349590583 instance=ExtResource("1_uwrxv")]
+
+[node name="UI" parent="." unique_id=1931595746 groups=["ui"] instance=ExtResource("5_iywne")]

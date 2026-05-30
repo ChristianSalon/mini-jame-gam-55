@@ -7,6 +7,9 @@
 radius = 9.0
 height = 36.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2els"]
+bg_color = Color(1, 0, 0, 1)
+
 [node name="Player" type="CharacterBody2D" unique_id=349590583 groups=["player"]]
 z_index = 10
 texture_filter = 1
@@ -21,3 +24,14 @@ shape = SubResource("CapsuleShape2D_g2els")
 
 [node name="ShootTimer" type="Timer" parent="." unique_id=361673241]
 one_shot = true
+
+[node name="CooldownBar" type="ProgressBar" parent="." unique_id=702146051]
+offset_left = 16.144554
+offset_top = -31.0
+offset_right = 22.144554
+offset_bottom = 1.0
+rotation = 1.5707964
+theme_override_styles/fill = SubResource("StyleBoxFlat_g2els")
+max_value = 1.0
+fill_mode = 3
+show_percentage = false

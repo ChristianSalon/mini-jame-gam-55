@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://u2f8c4gd7x02"]
+
+[ext_resource type="Script" uid="uid://b4dm7ugsk0of5" path="res://ui.gd" id="1_nt7q6"]
+[ext_resource type="FontFile" uid="uid://krq1ljcjmn58" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_x4jx1"]
+
+[node name="UI" type="CanvasLayer" unique_id=1931595746]
+script = ExtResource("1_nt7q6")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1561941357]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_x4jx1")
+theme_override_font_sizes/font_size = 24
