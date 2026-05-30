@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://xwflvcsovhvn"]
+
+[ext_resource type="Script" uid="uid://dkipaxhkkkso2" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://dlokbwbmc6ef8" path="res://assets/sprites/chef_cream.png" id="2_qhqgy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 9.0
+height = 36.0
+
+[node name="Player" type="CharacterBody2D" unique_id=349590583]
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=759140145]
+texture = ExtResource("2_qhqgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=783601129]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_g2els")
