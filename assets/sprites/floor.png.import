@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbsv7x827hrxa"
-path="res://.godot/imported/chef_cream.png-f0337824f23d089b5b4536126559bb95.ctex"
+uid="uid://lfyt8xb7mch8"
+path="res://.godot/imported/floor.png-6264fbe74424f0aef23944979b83713d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/chef_cream.png"
-dest_files=["res://.godot/imported/chef_cream.png-f0337824f23d089b5b4536126559bb95.ctex"]
+source_file="res://assets/sprites/floor.png"
+dest_files=["res://.godot/imported/floor.png-6264fbe74424f0aef23944979b83713d.ctex"]
 
 [params]
 

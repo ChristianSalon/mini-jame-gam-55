@@ -23,6 +23,11 @@ buses/default_bus_layout="uid://cli0wy52yshi1"
 
 Music="*uid://clxyklt22h3qx"
 
+[display]
+
+window/size/viewport_width=1000
+window/size/viewport_height=600
+
 [global_group]
 
 player=""

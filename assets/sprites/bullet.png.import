@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbsv7x827hrxa"
-path="res://.godot/imported/chef_cream.png-f0337824f23d089b5b4536126559bb95.ctex"
+uid="uid://dj4ht64ttn2ck"
+path="res://.godot/imported/bullet.png-f46585c7ec2413c07a04c5a8ef7289a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/chef_cream.png"
-dest_files=["res://.godot/imported/chef_cream.png-f0337824f23d089b5b4536126559bb95.ctex"]
+source_file="res://assets/sprites/bullet.png"
+dest_files=["res://.godot/imported/bullet.png-f46585c7ec2413c07a04c5a8ef7289a3.ctex"]
 
 [params]
 

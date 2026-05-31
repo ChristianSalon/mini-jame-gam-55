@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5kgnjqu0f7pn"
-path="res://.godot/imported/chef.png-efb1c8ea0c32b4a94e54ec01927b9303.ctex"
+uid="uid://crwtax87860ex"
+path="res://.godot/imported/fridge.png-60fab288a6e783fbfd85de6b7fa976b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/chef.png"
-dest_files=["res://.godot/imported/chef.png-efb1c8ea0c32b4a94e54ec01927b9303.ctex"]
+source_file="res://assets/sprites/fridge.png"
+dest_files=["res://.godot/imported/fridge.png-60fab288a6e783fbfd85de6b7fa976b6.ctex"]
 
 [params]
 

@@ -26,7 +26,7 @@ func _input(event: InputEvent) -> void:
 
 func _on_hurtbox_body_entered(body: Node) -> void:
 	# Check if the object hitting us is an enemy
-	if body.is_in_group("enemies") or body.has_method("die"):
+	if body.has_method("die"):
 		die()
 
 func die() -> void:
@@ -45,6 +45,5 @@ func shoot() -> void:
 	
 	var target = get_global_mouse_position()
 	bullet.direction = (target - global_position).normalized()
-	bullet.rotation = bullet.direction.angle()
 	
 	get_parent().add_child(bullet)

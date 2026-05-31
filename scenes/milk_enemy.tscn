@@ -6,8 +6,15 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6yip4"]
 height = 36.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oqcls"]
+height = 36.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jeoqb"]
+radius = 97.082436
+
 [node name="MilkEnemy" type="CharacterBody2D" unique_id=1911225450]
-collision_layer = 2
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_6yip4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=539953770]
@@ -18,3 +25,24 @@ texture = ExtResource("1_0p51g")
 z_index = 5
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_6yip4")
+
+[node name="CorpseArea" type="Area2D" parent="." unique_id=1376740115]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CorpseArea" unique_id=171825423]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_oqcls")
+
+[node name="ExplosionArea" type="Area2D" parent="." unique_id=234062213]
+collision_layer = 16
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionArea" unique_id=1832446344]
+shape = SubResource("CircleShape2D_jeoqb")
+
+[node name="CorpseTimer" type="Timer" parent="." unique_id=708890785]
+one_shot = true
+
+[connection signal="body_entered" from="CorpseArea" to="." method="_on_corpse_area_body_entered"]
+[connection signal="timeout" from="CorpseTimer" to="." method="_on_corpse_timer_timeout"]

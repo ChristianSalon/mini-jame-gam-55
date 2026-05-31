@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbsv7x827hrxa"
-path="res://.godot/imported/chef_cream.png-f0337824f23d089b5b4536126559bb95.ctex"
+uid="uid://bd8aqabr0ma2u"
+path="res://.godot/imported/mixer.png-572eda7b99109dea22bff90e1bd00bb1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/chef_cream.png"
-dest_files=["res://.godot/imported/chef_cream.png-f0337824f23d089b5b4536126559bb95.ctex"]
+source_file="res://assets/sprites/mixer.png"
+dest_files=["res://.godot/imported/mixer.png-572eda7b99109dea22bff90e1bd00bb1.ctex"]
 
 [params]
 
