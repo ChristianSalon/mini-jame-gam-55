@@ -44,18 +44,31 @@ custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 theme_override_constants/separation = 18
 
-[node name="Label" type="Label" parent="GameOverPanel/CenterContainer/VBoxContainer" unique_id=1673276389]
+[node name="MessageLabel" type="Label" parent="GameOverPanel/CenterContainer/VBoxContainer" unique_id=1673276389]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_x4jx1")
 theme_override_font_sizes/font_size = 32
 text = "THE MILK SPOILED YOUR DAY!"
 
+[node name="LastScoreLabel" type="Label" parent="GameOverPanel/CenterContainer/VBoxContainer" unique_id=2078624076]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_yev5y")
+theme_override_font_sizes/font_size = 16
+text = "SCORE: "
+horizontal_alignment = 1
+
 [node name="RestartButton" type="Button" parent="GameOverPanel/CenterContainer/VBoxContainer" unique_id=1332184190]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.8392157, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.8392157, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8392157, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.8392157, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8392157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_yev5y")
 theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_yev5y")
 theme_override_styles/hover = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/focus = SubResource("StyleBoxFlat_yev5y")
 text = "Try Again"

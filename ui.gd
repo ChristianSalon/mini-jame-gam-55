@@ -2,9 +2,11 @@ extends CanvasLayer
 
 @onready var score_label: Label = $ScoreLabel
 @onready var game_over_panel: PanelContainer = $GameOverPanel
+@onready var last_score_label: Label = $GameOverPanel/CenterContainer/VBoxContainer/LastScoreLabel
 @onready var restart_button: Button = $GameOverPanel/CenterContainer/VBoxContainer/RestartButton
 
 var score: int = 0
+
 
 func _ready() -> void:
 	update_score_text()
@@ -29,3 +31,4 @@ func add_score(amount: int) -> void:
 
 func update_score_text() -> void:
 	score_label.text = "Score: " + str(score)
+	last_score_label.text = "Score: " + str(score)
